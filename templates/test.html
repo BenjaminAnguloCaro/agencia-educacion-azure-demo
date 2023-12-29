@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Preguntas Frecuentes{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='test.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <header id="header_chatbot_chile">
+            <p class="ref_chatbot_chile" onclick="closeChatbot()">✕</p>
+            <div class="header-content">
+                <div class="h1_chatbot_chile"><strong>Preguntas Frecuentes</strong></div>
+                <div class="svg-container">
+                    <svg viewBox="0 0 500 130" preserveAspectRatio="xMinYMin meet">
+                        <defs>
+                            <linearGradient id="linear-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="MidnightBlue"></stop>
+                                <stop offset="100%" stop-color="#0f69b4"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path d="M-2.55,95.02 C221.49,146.33 231.66,53.58 501.97,113.77 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: url(&quot;#linear-gradient&quot;);"></path>
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <div class="chat-box">
+            <div class="conversation" id="conversation">
+                <div id="messages_chatbot_chile" style="height: 470px;">
+                    <table id="conversation_chatbot_chile" class="table_chatbot_chile">
+                        <tbody id="single_message_chatbot_chile">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="emojiContainer" style="position: relative; margin-top: auto;">
+            <input data-emoji-picker="true" type="text" id="input_chatbot_chile" placeholder="Escribir..." autocomplete="off" onkeydown="handleKeyPress(event)">
+            <a href="javascript:void(0)" style="position: absolute; top: 5px; right: 65px; text-decoration: none;">
+                <svg id="emoji" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 12 14">
+                    <path style="fill: gray" d="M8.9 8.4q-0.3 0.9-1.1 1.5t-1.8 0.6-1.8-0.6-1.1-1.5q-0.1-0.2 0-0.4t0.3-0.2q0.2-0.1 0.4 0t0.2 0.3q0.2 0.6 0.7 1t1.2 0.4 1.2-0.4 0.7-1q0.1-0.2 0.3-0.3t0.4 0 0.3 0.2 0 0.4zM5 5q0 0.4-0.3 0.7t-0.7 0.3-0.7-0.3-0.3-0.7 0.3-0.7 0.7-0.3 0.7 0.3 0.3 0.7zM9 5q0 0.4-0.3 0.7t-0.7 0.3-0.7-0.3-0.3-0.7 0.3-0.7 0.7-0.3 0.7 0.3 0.3 0.7zM11 7q0-1-0.4-1.9t-1.1-1.6-1.6-1.1-1.9-0.4-1.9 0.4-1.6 1.1-1.1 1.6-0.4 1.9 0.4 1.9 1.1 1.6 1.6 1.1 1.9 0.4 1.9-0.4 1.6-1.1 1.1-1.6 0.4-1.9zM12 7q0 1.6-0.8 3t-2.2 2.2-3 0.8-3-0.8-2.2-2.2-0.8-3 0.8-3 2.2-2.2 3-0.8 3 0.8 2.2 2.2 0.8 3z"></path>
+                </svg>
+            </a>
+            <img id="send_chatbot_chile" src="https://s3.amazonaws.com/chatbotchile/send.png" alt="send" onclick="sendQuestion()">
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{url_for('static', filename='test.js')}}"></script>
+{% endblock %}
+
+
