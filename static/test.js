@@ -120,7 +120,7 @@ function sendQuestion() {
 function sendPromptQuestion(promptId, promptText) {
     const url = "https://agencia-educacion-s.cognitiveservices.azure.com/language/:query-knowledgebases?projectName=agencia-eduacion-talleres&api-version=2021-10-01&deploymentName=production";
     const headers = {
-        "Ocp-Apim-Subscription-Key": "b08d17a8fbac4d36a3aa6434c78ae2b0",
+        "Ocp-Apim-Subscription-Key": "PUT THE SECRET KEY HERE",
         "Content-Type": "application/json",
     };
 
